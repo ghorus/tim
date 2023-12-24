@@ -1,0 +1,132 @@
+/*font-family: 'Inknut Antiqua', serif;
+font-family: 'Roboto Mono', monospace;
+font-family: 'Roboto Serif', serif;*/
+:root{
+    --frame_border:rgb(219, 219, 219);
+}
+body{
+    margin:0;
+}
+.copyright{
+    bottom:0;
+    font-family: 'Roboto Mono', monospace;
+    left:0;
+    margin:5px;
+    position: fixed;
+}
+.hero{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 100%;
+    width: 100vw;
+}
+.hero_cont{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height:100vh;
+    justify-content: center;
+    max-width: 100%;
+    width: 100vw;
+}
+
+.hero_content{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    max-width: 100%;
+    width: 100vw;
+}
+.hero_links,.hero_job{font-family: 'Roboto Mono', monospace;}
+.hero_name{
+    font-family: 'Roboto Serif', serif;
+    font-size: 35px;
+    margin:5px 0px;
+    position: relative;
+    width:300px;
+}
+
+.kairos {
+    align-items: center; 
+    background-color: rgb(255, 255, 255);
+    color:rgb(0, 0, 0);
+    display: flex; 
+    flex-direction: column;
+    font-family: 'Inknut Antiqua', serif;
+    height: 100vh; 
+    justify-content: center;
+    max-width: 100%;
+    width: 100vw;
+ 
+}
+.kairos_cont{
+    border: 20px solid rgb(0, 0, 0); 
+    display: flex;
+    flex-direction: column;
+    height:70vh; 
+    justify-content: center;
+    padding: 30px; 
+    width:70vh;}
+.kairos_lang{font-style: italic;margin-bottom:80px;}
+.kairos_title,.kairos_lang,.kairos_def{margin:0;padding: 0;}
+.kairos_title{
+    font-size: 120px;
+}
+.svg_underline{
+    bottom:0;
+    left:0;
+    position: absolute;
+}
+.tim_img1{
+    height:500px;
+}
+.tim_img1_cap{
+    position: absolute;
+    bottom:0;
+    transform: rotate(-90deg);
+    transform-origin: bottom left;
+}
+.tim_img1_cont{
+    position: relative;
+}
+.tim_info{
+    align-items: center;
+    background-color: black;
+    color:white;
+    display: flex;
+    font-family: 'Roboto Mono', monospace;
+    gap:15%;
+    height:100vh;
+    justify-content: center;
+    max-width: 100%;
+    width: 100vw;
+}
+.tim_links{
+    margin:55px 0px;
+}
+.tim_perk{
+    margin:10px 0px;
+}
+.tim_perks{
+    font-size: 17px;
+}
+.link{
+    font-size: 20px;
+    font-weight: bolder;
+}
+#underline{
+    stroke-dasharray:300;
+    stroke-dashoffset: 300;
+    stroke-width: 3px;
+}
+.animate{
+    animation: topdown 0.3s ease-in-out;
+    animation-fill-mode: forwards;
+}
+@keyframes topdown {
+    100% {stroke-dashoffset: 0;}
+}
