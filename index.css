@@ -4,6 +4,7 @@ font-family: 'Roboto Serif', serif;*/
 :root{
     --frame_border:rgb(219, 219, 219);
 }
+a:hover{cursor: pointer;}
 body{
     margin:0;
 }
@@ -13,25 +14,13 @@ body{
     left:0;
     margin:5px;
     position: fixed;
+    mix-blend-mode: difference;
 }
-.hero{
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    max-width: 100%;
-    width: 100vw;
+.hero_arrow{
+    position: absolute;
+    top:-50px;
+    right:-50px;
 }
-.hero_cont{
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    height:100vh;
-    justify-content: center;
-    max-width: 100%;
-    width: 100vw;
-}
-
 .hero_content{
     align-items: center;
     display: flex;
@@ -41,13 +30,30 @@ body{
     max-width: 100%;
     width: 100vw;
 }
+.hero_img{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    left:-40px;
+    opacity: 0;
+    position: absolute;
+    top:-220px;
+    transition: 0.2s ease-in-out;
+    width:324px;
+
+}
 .hero_links,.hero_job{font-family: 'Roboto Mono', monospace;}
+.hero_links{
+    position: relative;
+}
 .hero_name{
     font-family: 'Roboto Serif', serif;
-    font-size: 35px;
+    font-size: 38px;
+    letter-spacing: 3px;
     margin:5px 0px;
     position: relative;
-    width:300px;
+    transition: 0.2s;
+    width:372px;
 }
 
 .kairos {
@@ -72,14 +78,39 @@ body{
     padding: 30px; 
     width:70vh;}
 .kairos_lang{font-style: italic;margin-bottom:80px;}
+.kairos_moment{
+    font-family: 'Sacramento', cursive;
+    font-size: 30px;
+}
 .kairos_title,.kairos_lang,.kairos_def{margin:0;padding: 0;}
 .kairos_title{
     font-size: 120px;
 }
+.link{
+    font-size: 20px;
+    font-style: italic;
+    letter-spacing: 5px;
+}
+.link:hover{font-weight: bold;}
+.nav:hover{font-style: italic;}
+.svg_circ1,.svg_circ2,.svg_circ3{
+    left:-10px;
+    position: absolute;
+    top:-5px;
+}
 .svg_underline{
-    bottom:0;
+    bottom:-5px;
     left:0;
     position: absolute;
+}
+.t_1,.t_2,.t_3{position: relative;}
+.tim_img{
+    border-radius: 10px;
+    filter: saturate(0);
+    height:160px;
+    left:40px;
+    top:-180px;
+    width:160px;
 }
 .tim_img1{
     height:500px;
@@ -109,24 +140,33 @@ body{
     margin:55px 0px;
 }
 .tim_perk{
+    font-size: 15px;
     margin:10px 0px;
 }
 .tim_perks{
     font-size: 17px;
 }
-.link{
-    font-size: 20px;
-    font-weight: bolder;
+
+#circling{
+    stroke-dasharray:312;
+    stroke-dashoffset: 312;
+    transition: 0.3s ease-in-out;
+}
+.c_2{
+    stroke-dasharray:446;
+    stroke-dashoffset: 446;
+    transition: 0.3s ease-in-out;
 }
 #underline{
     stroke-dasharray:300;
     stroke-dashoffset: 300;
-    stroke-width: 3px;
+    stroke-width: 2px;
+    transition: 0.2s ease-in-out;
 }
-.animate{
-    animation: topdown 0.3s ease-in-out;
-    animation-fill-mode: forwards;
-}
-@keyframes topdown {
-    100% {stroke-dashoffset: 0;}
+
+@media screen and (max-width:1150px) {
+    .tim_info{
+        flex-direction: column;
+        gap:1%;
+    }
 }
