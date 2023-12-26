@@ -7,7 +7,9 @@ font-family: 'Roboto Serif', serif;*/
 a:hover{cursor: pointer;}
 body{
     margin:0;
+    position: relative;
 }
+.c_2{stroke-dasharray:446;stroke-dashoffset: 446;transition: 0.3s ease-in-out;}
 .copyright{
     bottom:0;
     font-family: 'Roboto Mono', monospace;
@@ -16,13 +18,23 @@ body{
     position: fixed;
     mix-blend-mode: difference;
 }
-.hero_arrow{
+.desc{
+    background-color: white;
+    border-radius: 5px;
+    color:black;
+    display: none;
+    font-family: 'Roboto Mono', monospace;
+    padding:5px 10px;
     position: absolute;
-    top:-50px;
-    right:-50px;
+    top:0;
+    left:0;
 }
+.engage,.growth,.impact,.media,.photo,.vid{position: relative;}
+.hero_arrow{position: absolute;top:-50px;right:-50px;}
 .hero_content{
     align-items: center;
+    animation:appear 0.8s linear;
+    animation-delay: 0.2s;
     display: flex;
     flex-direction: column;
     height: 100vh;
@@ -43,9 +55,7 @@ body{
 
 }
 .hero_links,.hero_job{font-family: 'Roboto Mono', monospace;}
-.hero_links{
-    position: relative;
-}
+.hero_links{position: relative;}
 .hero_name{
     font-family: 'Roboto Serif', serif;
     font-size: 38px;
@@ -55,7 +65,6 @@ body{
     transition: 0.2s;
     width:372px;
 }
-
 .kairos {
     align-items: center; 
     background-color: rgb(255, 255, 255);
@@ -78,31 +87,68 @@ body{
     padding: 30px; 
     width:70vh;}
 .kairos_lang{font-style: italic;margin-bottom:80px;}
-.kairos_moment{
-    font-family: 'Sacramento', cursive;
-    font-size: 30px;
-}
+.kairos_moment{font-family: 'Sacramento', cursive;font-size: 30px;}
 .kairos_title,.kairos_lang,.kairos_def{margin:0;padding: 0;}
-.kairos_title{
-    font-size: 120px;
-}
+.kairos_title{font-size: 120px;}
 .link{
+    color:white;
+    text-decoration: none;
     font-size: 20px;
     font-style: italic;
     letter-spacing: 5px;
 }
-.link:hover{font-weight: bold;}
+.link:hover{font-weight: bold;text-decoration: underline;}
 .nav:hover{font-style: italic;}
-.svg_circ1,.svg_circ2,.svg_circ3{
-    left:-10px;
-    position: absolute;
-    top:-5px;
+.port_content{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Roboto Mono', monospace;
+    margin:10px 0px 100px 10px;
 }
-.svg_underline{
-    bottom:-5px;
-    left:0;
-    position: absolute;
+.port_img{
+    height:140px;
+    object-fit: cover;
+    width:350px;
 }
+.port_imgs{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    justify-content: center;
+    margin:50px;
+    width:90vw;
+}
+.port_job{
+    font-size:15px;
+    font-weight: lighter;
+    margin:0px 0px 10px 0px;
+}
+.port_links{
+    display: flex;
+    flex-direction: column;
+}
+.port_nav,.nav{
+    color:black;
+    text-decoration: none;
+    width:106px;
+}
+.port_nav:hover{
+    font-style:oblique;
+}
+.port_vid{
+    height:140px;
+    object-fit: cover;
+    width:350px;
+}
+.port_works{
+    align-items: center;
+    font-family: 'Roboto Mono', monospace;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.svg_circ1,.svg_circ2,.svg_circ3{left:-10px;position: absolute;top:-5px;}
+.svg_underline{bottom:-5px;left:0;position: absolute;}
 .t_1,.t_2,.t_3{position: relative;}
 .tim_img{
     border-radius: 10px;
@@ -112,18 +158,13 @@ body{
     top:-180px;
     width:160px;
 }
-.tim_img1{
-    height:500px;
-}
+.tim_img1{height:500px;}
 .tim_img1_cap{
     position: absolute;
     bottom:0;
     transform: rotate(-90deg);
-    transform-origin: bottom left;
-}
-.tim_img1_cont{
-    position: relative;
-}
+    transform-origin: bottom left;}
+.tim_img1_cont{position: relative;}
 .tim_info{
     align-items: center;
     background-color: black;
@@ -136,26 +177,17 @@ body{
     max-width: 100%;
     width: 100vw;
 }
-.tim_links{
-    margin:55px 0px;
-}
-.tim_perk{
-    font-size: 15px;
-    margin:10px 0px;
-}
-.tim_perks{
-    font-size: 17px;
-}
-
-#circling{
-    stroke-dasharray:312;
-    stroke-dashoffset: 312;
-    transition: 0.3s ease-in-out;
-}
-.c_2{
-    stroke-dasharray:446;
-    stroke-dashoffset: 446;
-    transition: 0.3s ease-in-out;
+.tim_links{margin:55px 0px;}
+.tim_perk{font-size: 15px;margin:10px 0px;}
+.tim_perks{font-size: 17px;}
+.u1,.u4,.u5,.u6{bottom:-15px;left:0;position: absolute;}
+.u2,.u3{bottom:-15px;left:10px;position: absolute;}
+#circling{stroke-dasharray:312;stroke-dashoffset: 312;transition: 0.3s ease-in-out;}
+#u1,#u2,#u3,#u4,#u5,#u6{
+    stroke-dasharray:315;
+    stroke-dashoffset: 315;
+    stroke-width: 2px;
+    transition: 0.4s ease-in-out;
 }
 #underline{
     stroke-dasharray:300;
@@ -163,10 +195,14 @@ body{
     stroke-width: 2px;
     transition: 0.2s ease-in-out;
 }
-
-@media screen and (max-width:1150px) {
-    .tim_info{
-        flex-direction: column;
-        gap:1%;
-    }
+#yt{position:relative;}
+@media screen and (max-width:1255px) {
+    .tim_info{gap:5%;}
+}
+@media screen and (max-width:1180px) {
+    .tim_info{flex-direction: column;gap:5%;}
+}
+@keyframes appear {
+    0%{opacity: 0;}
+    100%{opacity:1;}
 }
