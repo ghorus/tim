@@ -7,6 +7,7 @@ font-family: 'Roboto Serif', serif;*/
 a:hover{cursor: pointer;}
 body{
     margin:0;
+    overflow-x: hidden;
     position: relative;
 }
 .c_2{stroke-dasharray:446;stroke-dashoffset: 446;transition: 0.3s ease-in-out;}
@@ -103,7 +104,8 @@ body{
     flex-direction: column;
     font-family: 'Roboto Mono', monospace;
     justify-content: center;
-    margin:10px 0px 100px 10px;
+    margin:10px 0px 100px 0px;
+    max-width: 100%;
     width:100vw;
 }
 .port_img{
@@ -114,7 +116,7 @@ body{
 .port_imgs{
     display: flex;
     flex-wrap: wrap;
-    gap: 7px;
+    /* gap: 7px; */
     justify-content: center;
     margin:50px;
     width:90vw;
@@ -172,6 +174,14 @@ body{
     flex-direction: column;
     justify-content: center;
 }
+.svg_circ1,.svg_circ3{
+    height: 54px;
+    width: 108px;
+}
+.svg_circ2{
+    height: 57;
+    width: 158px;
+}
 .svg_circ1,.svg_circ2,.svg_circ3{left:-10px;position: absolute;top:-5px;}
 .svg_underline{bottom:-5px;left:0;position: absolute;}
 .t_1,.t_2,.t_3{position: relative;}
@@ -219,11 +229,53 @@ body{
     transition: 0.2s ease-in-out;
 }
 #yt{position:relative;}
+@media screen and (max-width:1556px) {
+
+}
 @media screen and (max-width:1255px) {
     .tim_info{gap:5%;}
 }
 @media screen and (max-width:1180px) {
-    .tim_info{flex-direction: column;gap:5%;}
+    .tim_info{flex-direction: column;gap:5%;height: 100%;}
+    .tim_perk{
+        display: flex;
+        justify-content: center;
+    }
+}
+@media screen and (max-width:755px) {
+    .tim_img1{width:80vw;height:80vw;}
+    .tim_img1_cap{font-size: 12px;}
+}
+@media screen and (max-width:565px) {
+    .tim_links{
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+}
+@media screen and (max-width:400px) {
+    .hero_job{font-size: 14px;}
+    .hero_name{font-size: 28px;width:300px;}
+    .svg_circ1,.svg_circ3{
+        height:40px;
+        width:80px;
+    }
+    .svg_circ2{
+        width: 100px;
+    }
+    .tim_info{
+   
+    }
+    .tim_links{
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+    .tim_perk{font-size: 13px;}
+    .u1,.u2,.u3,.u4,.u5,.u6{
+
+        width:100px;
+    }
 }
 @keyframes appear {
     0%{opacity: 0;}

@@ -98,7 +98,8 @@ function getPos2(e){
     x=e.clientX;
     y=window.pageYOffset;
     yy=e.clientY;
-    desc.innerHTML="@_kairosvisuals, @tim_ngantung"
+    desc.innerHTML="@tim_ngantung"
+    // @_kairosvisuals, 
     desc.style.display = "block"
     desc.style.top=(y + yy - 50) + "px"
     desc.style.left=(x-20) + "px"}
