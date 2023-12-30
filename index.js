@@ -8,6 +8,49 @@ n.addEventListener("mouseover",()=>{
 n.addEventListener("mouseleave",()=>{
     u.style.strokeDashoffset = 300
     i.style.opacity = "0"})
+
+//portfolio
+const port_imgs = document.getElementsByClassName("port_img")
+const port_img_conts = document.getElementsByClassName("port_img_cont")
+Array.from(port_img_conts).forEach((thing) => {
+    thing.addEventListener("click",()=>{
+        console.log(thing.firstChild.className);
+        if(thing.firstChild.className=="port_img comm1"){
+           var modal =  document.createElement("div")
+           const body = document.querySelector("body")
+           modal.style.position
+           body
+        }
+    })
+}
+);
+const port_cats = document.getElementsByClassName("port_work_cat")
+Array.from(port_cats).forEach((thing) => 
+    thing.addEventListener("click",()=>{
+        //bold cat
+        Array.from(port_cats).forEach((t)=>{
+            if (thing.id==t.id){t.style.fontWeight="bold"}
+            else{t.style.fontWeight="400"}
+        })
+
+        //show imgs
+        Array.from(port_imgs).forEach((w) => {
+            if(thing.id==w.id){
+                thing.style.fontWeight="bold"
+                w.style.display="inline"
+            }
+            else if(thing.id=="all"){
+                w.style.display="inline";
+            }
+            else{
+                w.style.display="none"
+            }
+        }
+            );
+    })
+    
+);
+
 //hero name
 const hn = document.querySelector(".hero_name")
 //jobs
@@ -34,7 +77,7 @@ t2.addEventListener("mouseleave",()=>{
     i.style.opacity = "0"})
 t3.addEventListener("mouseover",()=>{
     c3.style.strokeDashoffset = 0;
-    ti.src = "tim.jpg"
+    ti.src = "tim4.jpg"
     i.style.opacity = "1"})
 t3.addEventListener("mouseleave",()=>{
     c3.style.strokeDashoffset =312

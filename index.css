@@ -33,8 +33,7 @@ body{
 .hero_arrow{position: absolute;top:-50px;right:-50px;}
 .hero_content{
     align-items: center;
-    animation:appear 0.8s linear;
-    animation-delay: 0.2s;
+    animation:appear 1.2s ease-in;
     display: flex;
     flex-direction: column;
     height: 100vh;
@@ -49,7 +48,7 @@ body{
     left:-40px;
     opacity: 0;
     position: absolute;
-    top:-220px;
+    top:-200px;
     transition: 0.2s ease-in-out;
     width:324px;
 
@@ -87,7 +86,6 @@ body{
     padding: 30px; 
     width:70vh;}
 .kairos_lang{font-style: italic;margin-bottom:80px;}
-.kairos_moment{font-family: 'Sacramento', cursive;font-size: 30px;}
 .kairos_title,.kairos_lang,.kairos_def{margin:0;padding: 0;}
 .kairos_title{font-size: 120px;}
 .link{
@@ -100,10 +98,13 @@ body{
 .link:hover{font-weight: bold;text-decoration: underline;}
 .nav:hover{font-style: italic;}
 .port_content{
+    align-items: center;
     display: flex;
     flex-direction: column;
     font-family: 'Roboto Mono', monospace;
+    justify-content: center;
     margin:10px 0px 100px 10px;
+    width:100vw;
 }
 .port_img{
     height:140px;
@@ -123,9 +124,27 @@ body{
     font-weight: lighter;
     margin:0px 0px 10px 0px;
 }
-.port_links{
+.port_img_cont:hover > .port_img_txt{
     display: flex;
-    flex-direction: column;
+}
+.port_img_cont{
+    position: relative;
+}
+.port_img_txt{
+    align-items: center;
+    background-color:rgb(255, 253, 227);
+    color:rgb(0, 0, 0);
+    display: none;
+    font-size: 18px;
+    font-weight: bolder;
+    height:140px;
+    justify-content: center;
+    left:0;
+    letter-spacing: 2px;
+    opacity: 0.8;
+    position: absolute;
+    top:0;
+    width:350px;
 }
 .port_nav,.nav{
     color:black;
@@ -140,6 +159,12 @@ body{
     object-fit: cover;
     width:350px;
 }
+.port_work_cats{
+    display: flex;
+    justify-content: center;
+    margin:10px;
+    flex-wrap: wrap;
+}
 .port_works{
     align-items: center;
     font-family: 'Roboto Mono', monospace;
@@ -153,12 +178,10 @@ body{
 .tim_img{
     border-radius: 10px;
     filter: saturate(0);
-    height:160px;
-    left:40px;
-    top:-180px;
-    width:160px;
+    height:180px;
+    width:180px;
 }
-.tim_img1{height:500px;}
+.tim_img1{height:700px;}
 .tim_img1_cap{
     position: absolute;
     bottom:0;
